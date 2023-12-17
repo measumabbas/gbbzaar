@@ -1,0 +1,74 @@
+.continue-post {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.continuepost {
+    margin: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 70px;
+    width: 781px;
+    height: 609px;
+    background: #232B48;
+}
+
+.continuepost h1 {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+    color: #FFFFFF;
+
+}
+
+.continuepost .inputs {
+    margin-top: 50px;
+}
+
+.continuepost .inputs p {
+    margin-top: 20px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+
+
+}
+
+.continuepost .inputs input {
+    margin-top: 10px;
+    width: 647px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 12px;
+    color: rgba(224, 224, 224, 0.31);
+}
+
+.continuepost button {
+    margin-top: 45px;
+    width: 163px;
+    height: 50px;
+    background: #2D7DD7;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}

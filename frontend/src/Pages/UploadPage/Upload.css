@@ -1,0 +1,156 @@
+.upload {
+    padding: 0px 140px;
+    background-color: #0B1334;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.back-btn {
+    margin-top: 20px;
+}
+
+.upload-content {
+    /* padding-left: 190px; */
+    max-width: 701px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-label{
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Urbanist';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#optionValue{
+    background-color: #0B1334;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+    margin-bottom: 70px;
+}
+#optionValue option{
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+    font-family: 'Urbanist';
+}
+
+.upload-content-title {
+    width: 697px;
+    height: 62px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 53px;
+    line-height: 62px;
+    text-align: center;
+    text-transform: capitalize;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+
+}
+
+.upload-content-image-section input.upload-content-image {
+    display: none;
+}
+
+.upload-content-image-section label {
+    cursor: pointer;
+}
+
+.upload-img {
+    width: 700px;
+    height: 470px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.error-message{
+    color: red;
+}
+
+.upload-photo {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 701px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.up-img img {
+    width: 32px;
+    height: 33px;
+}
+
+.drag-drop {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.upload-content textarea {
+    max-width: 701px;
+    height: 40px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    background: transparent;
+    border: none;
+    letter-spacing: 0.03em;
+    outline: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.upld-btn {
+    width: 701px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.upload-btn {
+    border: none;
+    background: #2D7DD7;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 213px;
+    height: 50px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.upload-btn:disabled{
+    background: #b7d1ef;
+}

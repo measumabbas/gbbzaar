@@ -1,0 +1,48 @@
+.signin-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 207px;
+    margin-bottom: 208px;
+
+}
+
+.signin-details-next {
+    width: 781px;
+    height: 609px;
+    padding-top: 90px;
+    padding-left: 61px;
+    background: #0D1845;
+    display: flex;
+    flex-direction: column;
+}
+.signin-details-input{
+    margin-top: 33px;
+}
+
+.signin-details-input p {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin-details-input input {
+    margin-top: 12px;
+    width: 647px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left: 21px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.4);
+}

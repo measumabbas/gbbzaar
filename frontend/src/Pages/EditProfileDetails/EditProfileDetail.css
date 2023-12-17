@@ -1,0 +1,106 @@
+.profile-form {
+    display: flex;
+    background: #232B48;
+    /* margin: 99px 126px; */
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.profile-form-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 150px;
+    /* margin-top: 104px; */
+    /* margin-left: 73px; */
+
+}
+
+.profile-form-left-img{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-form-left-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-form-right {
+    /* margin-top: 100px;
+    margin-left: 42px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 36px;
+
+}
+
+.profile-form-right label {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+}
+
+.profile-form-right input {
+    width: 879px;
+    height: 64px;
+    background: #39405A;
+    border-radius: 7px;
+    padding-left: 21px;
+    margin-top: 12px;
+    border: none;
+    outline: none;
+    color: rgba(224, 224, 224, 0.3);
+
+}
+
+.profile-form-right ::placeholder {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(224, 224, 224, 0.3);
+}
+
+.form-save-btn {
+    width: 200px;
+    height: 50px;
+    background: #2D7DD7;
+    border-radius: 10px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 54px;
+    margin-bottom: 60px;
+    cursor: pointer;
+
+}
+.form-save-btn:disabled{
+    background: #b7d1ef;
+}

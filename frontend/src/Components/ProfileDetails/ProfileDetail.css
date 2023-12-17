@@ -1,0 +1,134 @@
+.pro-leftandright {
+    display: flex;
+}
+
+.pro-left {
+    padding-left: 76px;
+}
+
+.profile-details {
+    width: 223px;
+    height: 223px;
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.profile-details{
+    margin-top: 230px;
+}
+.profile-details img.profile-pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.profile-details h1 {
+    margin-top: 50px;
+    margin-bottom: 18px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #FFFFFF;
+
+}
+
+.profile-details p {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+   
+}
+
+.profile-address {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-address p {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.profile-edit-btn {
+    transform: translateY(130px);
+    width: 223px;
+    height: 38px;
+    background: #2D7DD7;
+    border-radius: 20px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* -----------------pro-right------------------ */
+
+.pro-right {
+    margin-top: 85px;
+    margin-left: 77px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-right-top {
+    display: flex;
+    align-items: center;
+}
+
+.my-art-btn {
+    width: 166px;
+    height: 45px;
+    background: #2D7DD7;
+    border-radius: 40px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pro-right-top p {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pro-right-top-about {
+    margin-left: 52px;
+}
+
+.pro-right-top-share {
+    margin-left: 222px;
+}
+/* -----------------pro-right-bottom----------------- */
+.pro-right-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 61px;
+    gap: 25px;
+    margin-bottom: 60px;
+}

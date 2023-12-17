@@ -1,0 +1,162 @@
+.navbar {
+    height: 100px;
+    padding: 0px 140px;
+    display: flex;
+    color: #ffff;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0B1334;
+    /* overflow: hidden; */
+}
+
+.navbar-left-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 89px;
+}
+
+.navbar-left-home-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar-left-home-links a {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.navbar-left-home-links a:hover{
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.right-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-links {
+    position: relative;
+    padding-bottom: 20px;
+    transform: translateY(15px);
+}
+
+
+.profile-links:hover .logout {
+    display: flex;
+}
+
+.logout {
+    /* display: flex; */
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    background: #2E3658;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(22px); */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding-left: 11px;
+    width: 114px;
+    height: 50px;
+    padding-right: 15px;
+    /* color: #FFFFFF; */
+    z-index: 2;
+    display: none;
+}
+
+.logout::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 19px;
+    height: 19px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: #2E3658;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    backdrop-filter: blur(22px);
+    transform: rotate(45deg);
+    z-index: -1;
+    /* z-index: -1; */
+}
+
+.logout .logout-icon {
+    color: #FFFFFF;
+    /* width: 16px;
+    height: 16px; */
+    font-size: 18px;
+    transform: rotate(180deg);
+    margin-right: 6.5px;
+}
+
+.logout span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.left-navbar .logo {
+    color: #FFFFFF;
+}
+
+.navbar-search {
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    border: none;
+    width: 346px;
+    height: 40px;
+    padding-left: 20px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+
+.navbar-search::placeholder {
+    color: #FFFFFF;
+}
+
+.search-icon {
+    background: transparent;
+    position: relative;
+
+}
+
+.search-img {
+    position: absolute;
+    left: 310px;
+    top: -32px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.bell-icon {
+    cursor: pointer;
+}
+
+.profile-icon {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}

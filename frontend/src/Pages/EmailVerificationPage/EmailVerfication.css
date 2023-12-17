@@ -1,0 +1,71 @@
+.email-verify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailverify {
+    margin: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 781px;
+    height: 609px;
+    background: #232B48;
+}
+
+.emailverify h1 {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+
+
+}
+
+.emailverify p {
+    margin-top: 18px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.emailverify input {
+    margin-top: 90px;
+    width: 647px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 12px;
+    color: rgba(224, 224, 224, 0.31);
+
+}
+
+.emailverify button {
+    margin-top: 40px;
+    width: 647px;
+    height: 54px;
+    background: #2D7DD7;
+    border-radius: 10px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+
+}

@@ -1,0 +1,83 @@
+.email-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailcode {
+    margin: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 781px;
+    height: 609px;
+    background: #232B48;
+}
+
+.emailcode h1 {
+    margin-bottom: 48px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+
+}
+
+.emailcode p {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.code {
+    margin-top: 50px;
+    display: flex;
+    gap: 28px;
+}
+
+.emailcode input {
+    width: 76px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+
+
+}
+.resend{
+    margin-top: 30px;
+}
+
+.emailcode button {
+    margin-top: 53px;
+    width: 647px;
+    height: 54px;
+    background: #2D7DD7;
+    border-radius: 10px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+
+
+}
+.emailcode button:disabled{
+    background: #b7d1ef;
+}

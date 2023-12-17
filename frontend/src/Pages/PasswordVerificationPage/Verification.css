@@ -1,0 +1,95 @@
+.verification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verification-content {
+    margin: 200px 0px;
+    width: 781px;
+    height: 609px;
+    background: #232B48;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 67px;
+
+
+}
+
+.verification-content h1 {
+    margin-top: 134px;
+    margin-bottom: 48px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+
+}
+
+.code {
+    display: flex;
+    gap: 28px;
+}
+
+.verification-content input {
+    width: 76px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color:#ffffff;
+
+
+}
+
+.resend {
+    display: flex;
+    gap: 3px;
+}
+
+.resend .resend-code {
+    color: #2D7DD7;
+    cursor: pointer;
+}
+
+.verification-content p {
+    margin-top: 32px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.verification-content button {
+    margin-top: 53px;
+    margin-bottom: 167px;
+    width: 647px;
+    height: 54px;
+    background: #2D7DD7;
+    border-radius: 10px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+
+
+}
+.verification-content button:disabled{
+    background: #b7d1ef;
+}
