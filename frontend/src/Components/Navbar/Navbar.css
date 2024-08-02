@@ -1,14 +1,16 @@
 .navbar {
-    height: 100px;
+    height: 80px;
     padding: 0px 140px;
     display: flex;
-    color: #ffff;
     justify-content: space-between;
     align-items: center;
-    background-color: #0B1334;
     /* overflow: hidden; */
+    
 }
+.main-outer-navbar{
+    box-shadow: 0px 1px 6px 0px #00000026;
 
+}
 .navbar-left-links {
     display: flex;
     align-items: center;
@@ -24,7 +26,7 @@
 }
 
 .navbar-left-home-links a {
-    color: rgba(255, 255, 255, 0.70);
+    color: #000;
     font-family: Urbanist;
     font-size: 18px;
     font-style: normal;
@@ -34,7 +36,7 @@
 
 .navbar-left-home-links a:hover{
     font-weight: 500;
-    color: #FFFFFF;
+    color: #5C2E88;
 }
 
 .right-navbar {
@@ -60,7 +62,7 @@
     align-items: center;
     position: absolute;
     top: 65px;
-    background: #2E3658;
+    background: #fff;
     /* background: rgba(255, 255, 255, 0.1); */
     /* backdrop-filter: blur(22px); */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -81,7 +83,7 @@
     width: 19px;
     height: 19px;
     /* background: rgba(255, 255, 255, 0.1); */
-    background: #2E3658;
+    background: #fff;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     backdrop-filter: blur(22px);
     transform: rotate(45deg);
@@ -90,7 +92,7 @@
 }
 
 .logout .logout-icon {
-    color: #FFFFFF;
+    color: #000;
     /* width: 16px;
     height: 16px; */
     font-size: 18px;
@@ -104,16 +106,14 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #FFFFFF;
 }
 
 .left-navbar .logo {
-    color: #FFFFFF;
+    color: #5C2E88;
 }
 
 .navbar-search {
 
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     border: none;
     width: 346px;
@@ -123,12 +123,12 @@
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
-    color: #FFFFFF;
+    color: #000;
     line-height: 22px;
 }
 
 .navbar-search::placeholder {
-    color: #FFFFFF;
+    color: #000;
 }
 
 .search-icon {

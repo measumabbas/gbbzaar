@@ -32,7 +32,11 @@ import ProtectedRoute from './Components/protectedRoute/protectedRoute';
 import UnProtectedRoute from './Components/protectedRoute/UnProtectedRoute';
 import Loader from './Components/Loader/Loader';
 import UserProfile from './Pages/userProfile/UserProfile';
-
+import Offers from './Pages/Offers/Offers';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import Pdf from './Pages/Pdf/Pdf';
+import UploadPdf from './Pages/UploadPdf/UploadPdf';
 
 
 function App() {
@@ -53,6 +57,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home isLoggedIn={isLoggedIn} setIsloggedIn={setIsloggedIn}/>} />
         <Route path='/landingpage' element={<LandingPage />} />
+        <Route path='/pdf' element={<Pdf />} />
         <Route path='/profile/:id' element={<UserProfile/>}/>
         <Route path='/profile' element={<ProtectedRoute isAuthenticated={isAuthenticated} isEmailVerified={isEmailVerified} isAllDetails={isAllDetails}>
           <Profile/>
@@ -64,6 +69,12 @@ function App() {
 
         <Route path='/upload' element={<ProtectedRoute isAuthenticated={isAuthenticated} isEmailVerified={isEmailVerified} isAllDetails={isAllDetails}>
           <Upload/>
+        </ProtectedRoute>} />
+        <Route path='/upload-pdf' element={<ProtectedRoute isAuthenticated={isAuthenticated} isEmailVerified={isEmailVerified} isAllDetails={isAllDetails}>
+          <UploadPdf/>
+        </ProtectedRoute>} />
+        <Route path='/offers' element={<ProtectedRoute isAuthenticated={isAuthenticated} isEmailVerified={isEmailVerified} isAllDetails={isAllDetails}>
+          <Offers/>
         </ProtectedRoute>} />
        
         <Route path='/signup' element={<UnProtectedRoute isAuthenticated={isAuthenticated} >
@@ -108,8 +119,8 @@ function App() {
         <Route path='/loader' element={<Loader/>}/>
 
 
-      
       </Routes>
+        <ToastContainer />
     </BrowserRouter>
   );
 }

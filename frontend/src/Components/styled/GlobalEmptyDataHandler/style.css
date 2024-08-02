@@ -1,0 +1,17 @@
+.global-empty-data-handler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  left: 0;
+  right: 0;
+}
+.global-empty-data-handler p {
+  color: var(--blue-off-4, #22284F);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  
+}

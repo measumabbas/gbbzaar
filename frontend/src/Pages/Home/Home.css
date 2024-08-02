@@ -1,7 +1,6 @@
 .home-section {
     /* max-width: 1440px; */
     padding: 0px 130px;
-    background-color: #0B1334;
     /* overflow: hidden; */
 }
 
@@ -26,7 +25,6 @@
     /* gap: 10px; */
 
     /* height: 55px; */
-    color: rgba(255, 255, 255, 0.70);
     width: 170px;
     font-family: Urbanist;
     font-size: 22px;
@@ -38,9 +36,9 @@
 
 .community-catogory p:hover{
     border-radius: 30px;
-    background: #31A0FA;
+    background: #5C2E88;
     padding: 10px 30px;
-    color: #0B1334;
+    color: #fff;
     font-weight: 500;
 }
 .catogory-para{
@@ -48,10 +46,10 @@
     
 }
 .catogory-para.active{
-    background: #31A0FA;
+    background: #5C2E88;
     padding: 10px 30px;
     border-radius: 30px;
-    color: #0B1334;
+    color: #fff;
 }
 
 /* ------------------------Handmade-Arts------------------------- */
@@ -69,7 +67,6 @@
     font-weight: 500;
     font-size: 53px;
     line-height: 64px;
-    color: #FFFFFF;
 }
 
 .handmade-para {
@@ -108,7 +105,6 @@
     font-weight: 500;
     font-size: 53px;
     line-height: 64px;
-    color: #FFFFFF;
 }
 
 .historical-para {
@@ -129,4 +125,10 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 80px;
+}
+
+.home-page-filter-inputs{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
 }

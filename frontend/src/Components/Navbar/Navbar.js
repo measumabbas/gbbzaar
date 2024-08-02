@@ -19,12 +19,12 @@ const Navbar = ({ isLoggedIn, setIsloggedIn }) => {
     }
     return (
 
-        <>
+        <div className='main-outer-navbar'>
             <section className="navbar max-width-1440">
                 <div className="navbar-left-links">
                     <Link to={'/'}>
                         <div className="left-navbar">
-                            <h1 className="logo"><span className='primary-blue-color'> GB</span> ArtBazaar</h1>
+                            <h1 className="logo" style={{color:'#5C2E88'}}><span className='primary-blue-color'> Book</span> Spot</h1>
                         </div>
                     </Link>
 
@@ -32,6 +32,7 @@ const Navbar = ({ isLoggedIn, setIsloggedIn }) => {
                         <Link to={'/'}>Home</Link>
                         <Link to={'/aboutus'}>About Us</Link>
                         <Link to={'/aboutus'}>Contact Us</Link>
+                        <Link to={'/pdf'}>Pdf Books</Link>
                     </div>
 
 
@@ -47,7 +48,7 @@ const Navbar = ({ isLoggedIn, setIsloggedIn }) => {
                                 <img className='search-img' src={searchimg} alt="" />
                             </div>
                         </div> */}
-                        <Link to={'/aboutus'}><img className='bell-icon' src={bellicon} alt="" /></Link>
+                        {/* <Link to={'/aboutus'}><img className='bell-icon' src={bellicon} alt="" /></Link> */}
                         
                         <Link className='profile-links' to='/profile'><img className='profile-icon' src={user?.profileUrl} alt="" />
                             <Link to='/' className="logout" onClick={handleOnClick}>
@@ -61,7 +62,7 @@ const Navbar = ({ isLoggedIn, setIsloggedIn }) => {
                         <>
                             <div className="header-right">
                                 <Link to={'/login'}> <button className="landing-signin-btn">Sign In</button></Link>
-                                <Link to={'/signup'}> <button className="landing-register-btn">Register</button></Link>
+                                <Link to={'/signup'}> <button className="landing-register-btn" style={{boxShadow:'none'}}>Register</button></Link>
 
 
                             </div>
@@ -70,7 +71,7 @@ const Navbar = ({ isLoggedIn, setIsloggedIn }) => {
                 }
 
             </section>
-        </>
+        </div>
     )
 }
 

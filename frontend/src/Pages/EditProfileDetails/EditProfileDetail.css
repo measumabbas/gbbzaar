@@ -1,6 +1,6 @@
 .profile-form {
     display: flex;
-    background: #232B48;
+    background: #f9f9f9;
     /* margin: 99px 126px; */
     align-items: flex-start;
     justify-content: space-between;
@@ -59,20 +59,20 @@
     font-size: 16px;
     line-height: 19px;
 
-    color: #FFFFFF;
+    color: #666666;
 
 }
 
 .profile-form-right input {
     width: 879px;
     height: 64px;
-    background: #39405A;
+    background: #fff;
     border-radius: 7px;
     padding-left: 21px;
     margin-top: 12px;
-    border: none;
+    border: 1px solid #666666;
     outline: none;
-    color: rgba(224, 224, 224, 0.3);
+    color: #666666;
 
 }
 
@@ -82,13 +82,13 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: rgba(224, 224, 224, 0.3);
+    color: #666666;
 }
 
 .form-save-btn {
     width: 200px;
     height: 50px;
-    background: #2D7DD7;
+    background: #5C2E88;
     border-radius: 10px;
     font-family: 'Urbanist';
     font-style: normal;

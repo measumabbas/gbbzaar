@@ -1,0 +1,35 @@
+export const timeZones = [
+ {
+    name:"Europe/London"
+ },
+ {
+    name:"Europe/Dublin"
+ },
+ {
+    name:"Europe/Lisbon"
+ },
+ {
+    name:"Africa/Casablanca"
+ },
+ {
+    name:"Atlantic/Canary"
+ },
+ {
+    name:"Atlantic/Canary"
+ },
+ {
+    name:"Europe/Belgrade"
+ },
+ {
+    name:"Europe/Sarajevo"
+ },
+ {
+    name:"Europe/Brussels"
+ },
+ {
+    name:"Europe/Amsterdam"
+ },
+ {
+    name:"Africa/Algiers"
+ },
+];

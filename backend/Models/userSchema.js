@@ -86,8 +86,8 @@ userMongooseSchema.statics.signUp = async function (data) {
   const token = generateRandomToken();
   const mailOptions = {
     to: email,
-    subject: "GB Arts Bazaar Email Confirmation",
-    message: `Your email verification code for GBArts Bazaar is : ${token}`,
+    subject: "Book Spot Email Confirmation",
+    message: `Your email verification code for Book Spot Bazaar is : ${token}`,
   };
 
   try {

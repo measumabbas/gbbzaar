@@ -1,0 +1,10 @@
+.global-tag{
+    background-color: #3E0FFE;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+.global-tag p{
+    font-family: Roboto;
+    color: #fff;
+    font-size: 12px;
+}

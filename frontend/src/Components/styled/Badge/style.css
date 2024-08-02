@@ -1,0 +1,35 @@
+.global-badge {
+  width: 93px;
+  padding: 12px 0;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 5px;
+}
+.badge-success {
+  background: #e4ffe4;
+  color: #19b300;
+}
+.badge-error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #f60505;
+}
+.badge-info {
+  background-color: rgba(165, 239, 255, 0.4);
+  color: #0073c7;
+}
+
+.badge-no-show {
+  background: rgba(199, 0, 179, 0.1);
+  color: #c700b3;
+}
+
+@media (max-width: 430px) {
+  .global-badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    width: auto;
+  }
+}

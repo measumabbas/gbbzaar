@@ -1,22 +1,22 @@
 .post-details {
     padding: 0px 130px;
     padding-top: 30px;
-    background-color: #0B1334;
+    background-color: #F9F9F9;
     display: flex;
     gap: 30px;
+    margin-top: 50px;
+    position: relative;
 
 
 }
 
 .post-heading {
-    width: 475px;
-    height: 68px;
-    font-family: 'Cabin';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 140%;
-    color: #FFFFFF;
+    color: #666666;
+    margin-bottom: 5px;
 }
 
 .left-post {
@@ -36,7 +36,7 @@
 .edit-post-btn {
     width: 173px;
     height: 47px;
-    background: #3166E9;
+    background: #5C2E88;
     border-radius: 10px;
     font-family: 'Urbanist';
     font-style: normal;
@@ -50,7 +50,7 @@
 .dlt-post-btn {
     width: 173px;
     height: 47px;
-    border: 1px solid #2D7DD7;
+    border: 1px solid #5C2E88;
     border-radius: 10px;
     background: transparent;
     font-family: 'Urbanist';
@@ -58,7 +58,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
-    color: #FFFFFF;
+    color: #5C2E88;
     cursor: pointer;
 }
 
@@ -66,8 +66,7 @@
     width: 501px;
     height: 50px;
     border-radius: 10px;
-    background: #2D7DD7;
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    background: #5C2E88;
     margin-top: 30px;
     color: #FFF;
     text-align: center;
@@ -115,7 +114,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 145.8%;
-    color: #697694;
+    color: #666666;
 }
 
 .users-date {
@@ -125,7 +124,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 145.8%;
-    color: #697694;
+    color: #666666;
 }
 
 .post-heading2 {
@@ -135,7 +134,7 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 140%;
-    color: rgba(255, 255, 255, 0.7);
+    color: #666666;
 }
 
 .post-para {
@@ -147,7 +146,7 @@
     font-size: 14px;
     line-height: 23px;
     letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.7);
+    color: #666666;
 }
 
 .post-contact-links {
@@ -165,7 +164,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #666666;
 }
 
 .post-number {
@@ -202,7 +201,7 @@
 }
 
 .review-section h1 {
-    color: #FFF;
+    color: #666666;
     font-family: Cabin;
     font-size: 24px;
     font-style: normal;
@@ -224,12 +223,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
-    color: rgba(255, 255, 255, 0.70);
+    color: #666666;
     outline: none;
+    border: 1px solid #666666;
 }
 
 .review-section textarea::placeholder {
-    color: rgba(255, 255, 255, 0.70);
+    color: #666666;
 }
 
 
@@ -237,7 +237,7 @@
 .my-art-btn-1{
     width: 166px;
     height: 45px;
-    background: #2D7DD7;
+    background: #5C2E88;
     border-radius: 40px;
     font-family: 'Urbanist';
     font-style: normal;
@@ -249,4 +249,9 @@
 }
 .my-art-btn-1:disabled{
     background: #b7d1ef;
+}
+
+.make-offer-popup{
+    width: 500px;
+    padding: 30px;
 }

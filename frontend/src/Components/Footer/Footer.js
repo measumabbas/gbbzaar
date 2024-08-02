@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="footer-content">
 
                         <div className="column1">
-                            <h1 className="c1-header">GB ArtBazar</h1>
+                            <h1 className="c1-header">Book Spot</h1>
                             <p className="c1-para">Collaboration platform for individual artist.</p>
                         </div>
 
@@ -33,7 +33,7 @@ const Footer = () => {
                         </div>
                         <div className="column4">
                             <h1 className="c4-header">Contact Us</h1>
-                            <p className="c4-para1">GBArtsBazaar@gmal.com</p>
+                            <p className="c4-para1">bookspot@gmal.com</p>
                             <p className="c4-para2">03479838577</p>
                             <p className="c4-para3">IdeoMetriX office Sonikot Gilgit</p>
 
@@ -53,7 +53,7 @@ const Footer = () => {
 
                     </div>
                     
-                    <p className="copyright">© Copyright GBArtsBazaar</p>
+                    <p className="copyright">© Copyright BookSpot</p>
 
                 </div>
 

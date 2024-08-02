@@ -1,0 +1,36 @@
+.pdf-books{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 30px;
+}
+
+.pdf-book img{
+    width: 100%;
+}
+
+.pdf-main-container h1{
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.pdf-book h2{
+    color: #666666;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.pdf-book h3{
+    color: #666666;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.pdf-book h4{
+    color: #000;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.pdf-book{
+    cursor: pointer;
+}

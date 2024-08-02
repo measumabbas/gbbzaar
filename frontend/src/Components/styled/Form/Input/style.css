@@ -1,0 +1,37 @@
+.global-input-container {
+}
+.global-input-container-input input {
+  border-radius: 8px;
+  color: #666;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #000000;
+}
+.global-input-container label {
+  color: #666;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+}
+.global-input-container-input-with-image {
+  position: relative;
+}
+.global-input-container-input-with-image input {
+  padding-left: 50px;
+}
+.global-input-container-input-with-image img {
+  position: absolute;
+  top: 28%;
+  left: 15px;
+}
+
+.global-input-error {
+  white-space: nowrap;
+  font-family: Inter;
+  font-size: 11px;
+  color: #FF0000;
+  height: 10px;
+}

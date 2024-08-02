@@ -1,0 +1,49 @@
+.global-dropdown h3 {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.global-dropdown {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.global-drop-head {
+  border-radius: 8px;
+  padding: 13px 15px;
+  cursor: pointer;
+  border: 1px solid #afafaf;
+}
+.global-drop-head p {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.global-drop-dropdown {
+  position: absolute;
+  border-radius: 8px;
+  background: var(--White, #fff);
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  margin-top: 10px;
+  z-index: 1;
+  overflow: auto;
+}
+.global-drop-dropdown div {
+  padding: 15px;
+  border-bottom: 0.5px solid var(--Grey-5, #cdcdcd);
+}
+.global-drop-dropdown div h2 {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+
+}
+.global-drop-dropdown div h2:hover{
+  color: #121E31;
+}

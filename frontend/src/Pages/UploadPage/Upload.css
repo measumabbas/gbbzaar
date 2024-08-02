@@ -1,9 +1,9 @@
 .upload {
     padding: 0px 140px;
-    background-color: #0B1334;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-
+    margin-top: 50px;
 
 }
 
@@ -12,47 +12,50 @@
 }
 
 .upload-content {
-    /* padding-left: 190px; */
-    max-width: 701px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
-
-.cat-label{
-    color: rgba(255, 255, 255, 0.2);
+.upload-content-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.upload-content-input{
+    width: 100%;
+}
+/* .cat-label{
+    color: #666666;
     font-family: 'Urbanist';
     font-size: 20px;
     margin-bottom: 10px;
-}
+} */
 
-#optionValue{
-    background-color: #0B1334;
-    color: rgba(255, 255, 255, 0.2);
+/* #optionValue{
+    background-color: #fff;
+    color: #666666;
     font-size: 18px;
     margin-bottom: 70px;
 }
 #optionValue option{
-    color: rgba(255, 255, 255, 0.2);
+    color: #666666;
     font-size: 18px;
     font-family: 'Urbanist';
-}
+} */
 
-.upload-content-title {
-    width: 697px;
-    height: 62px;
+/* .upload-content-title {
+    
     font-family: 'Urbanist';
     font-style: normal;
     font-weight: 800;
-    font-size: 53px;
+    font-size: 18px;
     line-height: 62px;
-    text-align: center;
+    text-align: left;
     text-transform: capitalize;
     background: transparent;
     border: none;
-    color: rgba(255, 255, 255, 0.2);
+    color: #666666;
     margin-bottom: 30px;
-
+    border: 1px solid #666666;
+    padding: 0 20px;
 }
 
 .upload-content-image-section input.upload-content-image {
@@ -61,11 +64,11 @@
 
 .upload-content-image-section label {
     cursor: pointer;
-}
+} */
 
 .upload-img {
-    width: 700px;
-    height: 470px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -74,12 +77,17 @@
     justify-content: center;
     position: relative;
 }
+.upload-img img{
+    width: 100%;
+    height: 100%;
+}
+
 
 .error-message{
     color: red;
 }
 
-.upload-photo {
+/* .upload-photo {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -90,14 +98,14 @@
     
     align-items: center;
     justify-content: center;
-}
+} */
 
-.up-img img {
+/* .up-img img {
     width: 32px;
     height: 33px;
-}
+} */
 
-.drag-drop {
+/* .drag-drop {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -107,6 +115,10 @@
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+} */
+.book-details-form-head{
+    margin-bottom: 20px;
+    color: #666666;
 }
 
 .upload-content textarea {
@@ -127,16 +139,13 @@
 }
 
 .upld-btn {
-    width: 701px;
-    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
 }
 
 .upload-btn {
     border: none;
-    background: #2D7DD7;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.25);
+    background: #5C2E88;
     border-radius: 10px;
     width: 213px;
     height: 50px;

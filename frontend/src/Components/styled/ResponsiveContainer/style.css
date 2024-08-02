@@ -1,0 +1,9 @@
+.global-responsive-container{
+    display: none;
+}
+
+@media(max-width:430px){
+    .global-responsive-container{
+        display: block;
+    }
+}

@@ -1,0 +1,36 @@
+.offers-inner-container{
+    padding: 50px 140px;
+}
+
+.offers-inner-container h1:first-child{
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.offers table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.offers table th{
+    text-align: left;
+}
+
+.offers table td,.offers table th{
+    border: 1px solid #666666;
+    padding: 10px;
+    color: #666666;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.accept-offer-popup{
+    width: 500px;
+    padding: 30px;
+}
+.accept-offer-popup h2{
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 30px;
+}

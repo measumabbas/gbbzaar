@@ -13,6 +13,12 @@ exports.artSchema = Joi.object({
     category: Joi.string().required().messages({
         'any.required':'Please Provide art category'
     }),
+    language: Joi.string().required().messages({
+        'any.required':'Please Provide book language'
+    }),
+    language: Joi.string().required().messages({
+        'any.required':'Please Provide book language'
+    }),
     description: Joi.string().required().messages({
         'any.required':'Please Provide art description'
     }),

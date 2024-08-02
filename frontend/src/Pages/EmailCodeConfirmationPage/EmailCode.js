@@ -80,7 +80,7 @@ const EmailCode = ({ isEmailVerified }) => {
           </div>
           <div className="resend">
             <p>If you didn’t receive a code, </p>
-            <p className="resend-code">Resend</p>
+            <p className="resend-code" style={{color:'#5C2E88'}}>Resend</p>
           </div>
           <button disabled={loading ? true : false} onClick={handleVerify}>
             {loading ? <BtnLoader /> : "Verify"}

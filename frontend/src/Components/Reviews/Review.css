@@ -3,13 +3,15 @@
 
     display: flex;
     flex-direction: column;
-    background: #232B48;
+    background: #fff;
     border-radius: 10px;
+    border: 1px solid rgba(102, 102, 102,0.3);
 }
 
 .review-card-up {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 12px;
     padding-bottom: 6px;
     padding-left: 12px;
@@ -22,23 +24,21 @@
 
 .review-card-up h1 {
     margin-top: 12px;
-    font-family: 'Cabin';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
-    color: #FFFFFF;
+    color: #666666;
 }
 
 .review-center p {
     width: 260px;
     margin-left: 12px;
-    font-family: 'Cabin';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 130%;
-    color: rgba(255, 255, 255, 0.5);
+    color: #666666;
 
 }
 
@@ -47,6 +47,8 @@
     width: 28px;
     height: 28px;
     margin-left: 17px;
+    border-radius: 50%;
+    transform: translateY(5px);
 
 }
 

@@ -1,0 +1,13 @@
+.global-error-popup {
+  padding: 30px;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.global-error-popup p{
+  color: var(--blue-off-4, #7d7eaa);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}

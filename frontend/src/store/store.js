@@ -9,6 +9,8 @@ import { tokenReducer, userEmailVerifyReducer, userReducer,updateUserReducer, ge
 import {uploadArtReducer,getAllArts,getUserArts, deleteUserArt, getSingleArt, addReviewReducer, getArtReviews, updateArt} from './reducers/artReducer'
 import { persistStore, persistReducer,persistCombineReducers } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import { offerReducer } from "./reducers/offerReducer";
+import { pdfReducer } from "./reducers/pdfReducer";
 const persistConfig = {
     key: 'root',
     storage,
@@ -32,6 +34,8 @@ const reducer = combineReducers({
     updateUser:updateUserReducer,
     emailVerify: userEmailVerifyReducer,
     user:userReducer,
+    offer:offerReducer,
+    pdf:pdfReducer,
     token:persistReducer(persistConfig, tokenReducer),
 })
 

@@ -12,15 +12,21 @@ import { uploadArt } from "../../store/actions/artActions";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import BtnLoader from "../../Components/BtnLoader/BtnLoader";
-import { UPLOAD_ART_FAIL, UPLOAD_ART_REQUEST, UPLOAD_ART_RESET } from "../../store/constants/artConstants";
-// import { isDisabled } from '@testing-library/user-event/dist/utils'
+import {
+  UPLOAD_ART_FAIL,
+  UPLOAD_ART_REQUEST,
+  UPLOAD_ART_RESET,
+} from "../../store/constants/artConstants";
+import { useForm } from "react-hook-form";
+import Flex from "../../Components/styled/Flex/Flex";
+import GlobalDropDown from "../../Components/styled/Form/GlobalDropDown/GlobalDropDown";
 
 const Upload = () => {
   const [isLoggedIn, setIsloggedIn] = useState(true);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
-  const { success, error,loading } = useSelector((state) => state.uploadArt);
+  const { success, error, loading } = useSelector((state) => state.uploadArt);
 
   // console.log(user._id)
 
@@ -42,13 +48,13 @@ const Upload = () => {
   useEffect(() => {
     if (success) {
       Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Art has been uploaded successfully',
+        position: "top-end",
+        icon: "success",
+        title: "Book has been uploaded successfully",
         showConfirmButton: false,
-        timer: 2500
-      })
-      dispatch({type:UPLOAD_ART_RESET})
+        timer: 2500,
+      });
+      dispatch({ type: UPLOAD_ART_RESET });
       navigate("/profile");
     }
   }, [dispatch, success]);
@@ -64,8 +70,8 @@ const Upload = () => {
     }
   }, [dispatch, error]);
 
-  const handleSubmit = async () => {
-    dispatch({type:UPLOAD_ART_REQUEST})
+  const handleUploadBook = async (values) => {
+    dispatch({ type: UPLOAD_ART_REQUEST });
     const myForm = new FormData();
     myForm.append("file", selectedImage);
     myForm.append("upload_preset", "oha7na0l");
@@ -77,39 +83,36 @@ const Upload = () => {
       );
 
       const data = {
-        title: formik.values.title,
-        description: formik.values.description,
+        title: values.title,
+        description: values.description,
         imageUrl: res.data.url,
         user_id: user._id,
-        category: formik.values.optionValue,
+        category: values.category,
+        language: values.language,
+        condition: selectedCondition.value,
+        availability: selectedAvailability.value,
+        author: values.author,
       };
       dispatch(uploadArt(data));
     } catch (error) {
-      dispatch({type:UPLOAD_ART_FAIL,error:error.message})
-      // console.log(error);
+      dispatch({ type: UPLOAD_ART_FAIL, error: error.message });
       Swal.fire({
-        icon: 'error',
-        title: 'Please fix the errors above',
-        text: `Please check your internet connection`
-      })
+        icon: "error",
+        title: "Please fix the errors above",
+        text: `Please check your internet connection`,
+      });
     }
   };
-  const formik = useFormik({
-    initialValues: {
-      title: "",
-      description: "",
-      optionValue: "",
-    },
-
-    onSubmit: handleSubmit,
-  });
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [selectedCondition, setSelectedCondition] = useState(null);
+  const [selectedAvailability, setSelectedAvailability] = useState(null);
+  const [showImage, setShowImage] = useState(null);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
-
+    console.log(file);
     // Check if the file is an image
     if (file && file.type.startsWith("image/")) {
       const reader = new FileReader();
@@ -118,31 +121,26 @@ const Upload = () => {
         const image = new Image();
 
         image.onload = () => {
-          // Get the width and height of the image
           const { width, height } = image;
-
-          // Define the minimum and maximum allowed sizes
           const minWidth = 100;
           const minHeight = 100;
-          const maxWidth = 1200;
-          const maxHeight = 1200;
-
-          // Perform size validation here
+          const maxWidth = 1500;
+          const maxHeight = 1500;
           if (
             width >= minWidth &&
             height >= minHeight &&
             width <= maxWidth &&
             height <= maxHeight
           ) {
-            // Image size is valid, set the selected image and show success message
-            setSelectedImage(reader.result);
+            setSelectedImage(file);
+            setShowImage(reader.result);
             setErrorMessage("");
           } else {
-            // Image size is not valid, show an error message
             setErrorMessage(
               "Image size is not within the allowed limits(100-701 x 100-445). Please choose an image with appropriate dimensions."
             );
             setSelectedImage(null);
+            setShowImage(null);
           }
         };
 
@@ -152,90 +150,193 @@ const Upload = () => {
       reader.readAsDataURL(file);
     } else {
       setErrorMessage("Please select an image");
-      setSelectedImage(null);
     }
   };
 
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
   return (
     <>
       <Navbar isLoggedIn={isLoggedIn} setIsloggedIn={setIsloggedIn} />
 
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit(handleUploadBook)}>
         <section className="upload max-width-1440">
-          <div className="back-btn">
-            <img onClick={() => navigate(-1)} src={backbtn} alt="" />
-          </div>
-          <div className="upload-content">
-            <input
-              className="upload-content-title"
-              name="title"
-              type="text"
-              placeholder="Enter your title"
-              onChange={formik.handleChange}
-              value={formik.values.title}
-            />
-            <div className="upload-content-image-section " id="img-box">
-              <input
-                className="upload-content-image"
-                type="file"
-                accept="image/*"
-                name="file"
-                id="file"
-                onChange={handleImageUpload}
-              />
-              <label htmlFor="file">
-                <div>
-                  {selectedImage ? (
-                    <div className="upload-img">
-                      {/* <img src={selectedImage} alt="Preview" /> */}
-                      {selectedImage && (
-                        <img src={selectedImage} alt="Selected" />
-                      )}
-                    </div>
-                  ) : (
-                    // <img src={uploadimg} alt="Preview" />
-                    <>
-                      <div className="upload-photo">
-                        <div className="up-img">
-                          <img src={uploadimg} alt="" />
-                          <span className="drag-drop">Drag & Drop Image</span>
-                        </div>
-                      </div>
-                      {errorMessage && (
-                        <div className="error-message">{errorMessage}</div>
-                      )}
-                    </>
-                  )}
-                </div>
-              </label>
-            </div>
-            <textarea
-              name="description"
-              id=""
-              placeholder="Type your desicribtion here ( up to 200 words)"
-              cols="30"
-              rows="1"
-              onChange={formik.handleChange}
-              value={formik.values.description}
-            ></textarea>
-
-            <label htmlFor="optionValue" className="cat-label">
-              Please select category
-            </label>
-            <select
-              id="optionValue"
-              name="optionValue"
-              onChange={formik.handleChange}
+          <h1 className="book-details-form-head">Enter Book Details</h1>
+          <div className="upload-content-inputs">
+            <Flex
+              className={`global-input-container global-outer-input upload-content-input`}
+              direction="column"
+              gap={10}
             >
-              <option>Please Select category</option>
-              <option value="art">Art</option>
-              <option value="handicraft">Handicrafts</option>
-              <option value="designing">Designing</option>
-            </select>
+              <label htmlFor="title">Book Name*</label>
+              <div className="global-input-container-input">
+                <input
+                  type={"text"}
+                  placeholder={"Book Title"}
+                  {...register("title", {
+                    required: "Please Enter Book Title",
+                    maxLength: {
+                      value: 100,
+                      message: "Should not be greater then 100 characters",
+                    },
+                  })}
+                  id="title"
+                />
+              </div>
+            </Flex>
+            <Flex
+              className={`global-input-container global-outer-input upload-content-input`}
+              direction="column"
+              gap={10}
+            >
+              <label htmlFor="author">Book Author*</label>
+              <div className="global-input-container-input">
+                <input
+                  type={"text"}
+                  placeholder={"Author Name"}
+                  {...register("author", {
+                    required: "Please Enter author Name",
+                    maxLength: {
+                      value: 20,
+                      message: "Should not be greater then characters",
+                    },
+                  })}
+                  id="author"
+                />
+              </div>
+            </Flex>
+            <Flex
+              className={`global-input-container global-outer-input upload-content-input`}
+              direction="column"
+              gap={10}
+            >
+              <label htmlFor="category">Category *</label>
+              <div className="global-input-container-input">
+                <input
+                  type={"text"}
+                  placeholder={"Category"}
+                  {...register("category", {
+                    required: "Please Enter category",
+                    maxLength: {
+                      value: 20,
+                      message: "Should not be greater then characters",
+                    },
+                  })}
+                  id="category"
+                />
+              </div>
+            </Flex>
+            <Flex
+              className={`global-input-container global-outer-input upload-content-input`}
+              direction="column"
+              gap={10}
+            >
+              <label htmlFor="language">Language *</label>
+              <div className="global-input-container-input">
+                <input
+                  type={"text"}
+                  placeholder={"Book Language"}
+                  {...register("language", {
+                    required: "Please Enter Book Language",
+                    maxLength: {
+                      value: 20,
+                      message: "Should not be greater then characters",
+                    },
+                  })}
+                  id="language"
+                />
+              </div>
+            </Flex>
+            <div className="upload-content-input">
+              <GlobalDropDown
+                background="#fff"
+                stateHandler={selectedCondition}
+                setStateHandler={setSelectedCondition}
+                label="Condition*"
+                options={[
+                  { name: "New", value: 1 },
+                  { name: "Like New", value: 2 },
+                  { name: "Good", value: 3 },
+                  { name: "Fair", value: 4 },
+                  { name: "Poor", value: 5 },
+                ]}
+              />
+            </div>
+            <div className="upload-content-input">
+              <GlobalDropDown
+                background="#fff"
+                stateHandler={selectedAvailability}
+                setStateHandler={setSelectedAvailability}
+                label="Availability*"
+                options={[
+                  { name: "Exchange", value: 1 },
+                  { name: "Sale", value: 2 },
+                  { name: "Both", value: 3 },
+                ]}
+              />
+            </div>
+          </div>
+          <div className="lable-textarea-group lable-input-group mb-40">
+            <label htmlFor="notes">Description*</label>
+            <div className="edit-client-icon-textarea">
+              <textarea
+                name=""
+                id="notes"
+                cols="135"
+                rows="3"
+                placeholder="Description"
+                {...register("description", {
+                  required: "Please Add description",
+                })}
+              ></textarea>
+            </div>
+            <p className="global-input-error">
+              {errors?.description && errors?.description?.message}
+            </p>
+          </div>
+          <div className="upload-content-image-section mb-40" id="img-box">
+            <label htmlFor="file">
+              <div>
+                {selectedImage ? (
+                  <div className="upload-img">
+                    {/* <img src={selectedImage} alt="Preview" /> */}
+                    {selectedImage && <img src={showImage} alt="Selected" />}
+                  </div>
+                ) : (
+                  // <img src={uploadimg} alt="Preview" />
+                  <>
+                    <div className="upload-photo">
+                      <span className="drag-drop">Select Image</span>
+                    </div>
+                    {/* {errorMessage && (
+                      <div className="error-message">{errorMessage}</div>
+                    )} */}
+                  </>
+                )}
+              </div>
+            </label>
+            <input
+              className="upload-content-image"
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onChange={handleImageUpload}
+            />
+            <label htmlFor="file" className="upload-content-label">
+              Choose image
+            </label>
           </div>
           <div className="upld-btn">
-            <button disabled={loading?true:false} type="submit" className="upload-btn">
-              {loading?<BtnLoader/>:"Upload"}
+            <button
+              disabled={loading ? true : false}
+              type="submit"
+              className="upload-btn"
+            >
+              {loading ? <BtnLoader /> : "Upload"}
             </button>
           </div>
         </section>
